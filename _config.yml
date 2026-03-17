@@ -1,11 +1,11 @@
 # Site settings
 title: Cory Spraker
 email: cory.spraker@gmail.com
-url: https://github.com/jeromelachaud/freelancer-theme
+url: https://coryspraker.netlify.app
 description: "multidisciplinary artist whose work draws attention to the delicacy of human form, often expressed through layering and mark making. Caught in moments of solitude or introspection, figures in his work are isolated by light from outside their world; drawing attention to their repose and contemplation. other elements, pulled from nature, refer back to the human figures at the center of each work."
 keywords: "art, pen drawings, pet portraits"
 skills: "Fine Artist"
-meta_author: LastName FirstName
+meta_author: Spraker Cory
 
 # Google webmaster tools
 google_verify:
@@ -25,35 +25,31 @@ disqus_shortname: myshortname
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 18bc9c #80B3FF
+  primary: 18bc9c #0xff
   primary-rgb: "24,288,156" #"128,179,255"
   secondary: 2c3e50 #FD6E8A
   secondary-dark: 233140 #A2122F
 
 # Footer settings
 footer:
-  copyright: Dr. Henry Jekyll
+  copyright: Cory Spraker
   location: Location
   social: Around the Web
   credits: Credits
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: twitter
-    url: http://twitter.com/jekyllrb
+#  - title: twitter
+#    url: http://twitter.com/jekyllrb
   - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
-  - title: github
-    url: http://github.com/jekyll
+    url: https://www.facebook.com/cory.spraker
+  - title: instagram
+    url: https://www.instagram.com/corysprakes/?hl=en
+  
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+  - line: Hudson Valley, New York
 
 # Credits content
 credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
