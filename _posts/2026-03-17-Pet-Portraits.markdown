@@ -2,6 +2,7 @@
 layout: default
 modal-id: 1
 date: 2026-03-17
+img: jackson.png
 images:
   - jackson.png
   - safe.png
