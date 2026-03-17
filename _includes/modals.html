@@ -17,46 +17,50 @@
               <p>{{ post.description }}</p>
             {% endif %}
 
-            <!-- Carousel -->
-            {% if post.img or post.images %}
-            <div id="carousel-{{ post.modal-id }}" class="carousel slide" data-ride="carousel">
+            {% if post.images %}
+            
+            <div class="portfolio-slideshow"
+                 data-modal="{{ post.modal-id }}">
+            
+            {% for image in post.images %}
+            <div class="portfolio-slide"
+                 data-modal="{{ post.modal-id }}">
+            
+            <img src="img/portfolio/{{ image }}"
+                 class="portfolio-slide-img"
+                 onclick="openPortfolioLightbox(this)">
+            
+            </div>
+            {% endfor %}
+            
+            </div>
+            
+            <!-- Navigation dots -->
+            <div class="portfolio-dots">
+            
+            {% for image in post.images %}
+            <span class="portfolio-dot"
+                  data-modal="{{ post.modal-id }}"
+                  onclick="showPortfolioSlideByModal('{{ post.modal-id }}', {{ forloop.index }})">
+            </span>
+            {% endfor %}
+            
+            </div>
+            
+            {% else %}
+            
+            <img src="img/portfolio/{{ post.img }}"
+                 class="portfolio-slide-img"
+                 onclick="openPortfolioLightbox(this)">
+            
+            {% endif %}
 
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                {% assign total_images = 0 %}
-                {% if post.img %}{% assign total_images = total_images | plus: 1 %}{% endif %}
-                {% if post.images %}{% assign total_images = total_images | plus: post.images | size %}{% endif %}
-
-                {% for i in (0..total_images-1) %}
-                  <li data-target="#carousel-{{ post.modal-id }}" data-slide-to="{{ i }}" class="{% if i == 0 %}active{% endif %}"></li>
-                {% endfor %}
-              </ol>
-
-              <!-- Slides -->
-              <div class="carousel-inner">
-
-                {% if post.img %}
-                  <div class="item active">
-                    <img src="/img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
-                  </div>
-                {% endif %}
-
-                {% if post.images %}
-                  {% for image in post.images %}
-                    <div class="item {% if post.img == null and forloop.first %}active{% endif %}">
-                      <img src="/img/portfolio/{{ image }}" class="img-responsive img-centered">
-                    </div>
-                  {% endfor %}
-                {% endif %}
-
-              </div>
-
-              <!-- Controls -->
+             <!-- Controls -->
               <a class="left carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
+                <i class="fa fa-chevron-left fa-2x"></i>
               </a>
               <a class="right carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
+                <i class="fa fa-chevron-right fa-2x"></i>
               </a>
 
             </div>
