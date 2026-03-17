@@ -18,52 +18,41 @@
             {% endif %}
 
             {% if post.images %}
+
+            <div class="portfolio-slideshow" data-modal="{{ post.modal-id }}">
             
-            <div class="portfolio-slideshow"
-                 data-modal="{{ post.modal-id }}">
+              <!-- Slides -->
+              {% for image in post.images %}
+              <div class="portfolio-slide" data-modal="{{ post.modal-id }}">
+                <img src="img/portfolio/{{ image }}" class="portfolio-slide-img" onclick="openPortfolioLightbox(this)">
+              </div>
+              {% endfor %}
             
-            {% for image in post.images %}
-            <div class="portfolio-slide"
-                 data-modal="{{ post.modal-id }}">
-            
-            <img src="img/portfolio/{{ image }}"
-                 class="portfolio-slide-img"
-                 onclick="openPortfolioLightbox(this)">
-            
-            </div>
-            {% endfor %}
+              <!-- Left/Right Controls -->
+              <a class="portfolio-prev" onclick="changePortfolioSlide('{{ post.modal-id }}', -1)">
+                &#10094; <!-- left arrow symbol -->
+              </a>
+              <a class="portfolio-next" onclick="changePortfolioSlide('{{ post.modal-id }}', 1)">
+                &#10095; <!-- right arrow symbol -->
+              </a>
             
             </div>
             
             <!-- Navigation dots -->
             <div class="portfolio-dots">
-            
-            {% for image in post.images %}
-            <span class="portfolio-dot"
-                  data-modal="{{ post.modal-id }}"
-                  onclick="showPortfolioSlideByModal('{{ post.modal-id }}', {{ forloop.index }})">
-            </span>
-            {% endfor %}
-            
+              {% for image in post.images %}
+              <span class="portfolio-dot"
+                    data-modal="{{ post.modal-id }}"
+                    onclick="showPortfolioSlideByModal('{{ post.modal-id }}', {{ forloop.index }})">
+              </span>
+              {% endfor %}
             </div>
             
             {% else %}
             
-            <img src="img/portfolio/{{ post.img }}"
-                 class="portfolio-slide-img"
-                 onclick="openPortfolioLightbox(this)">
+            <!-- Fallback single image -->
+            <img src="img/portfolio/{{ post.img }}" class="portfolio-slide-img" onclick="openPortfolioLightbox(this)">
             
-            {% endif %}
-
-             <!-- Controls -->
-              <a class="left carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="prev">
-                <i class="fa fa-chevron-left fa-2x"></i>
-              </a>
-              <a class="right carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="next">
-                <i class="fa fa-chevron-right fa-2x"></i>
-              </a>
-
-            </div>
             {% endif %}
 
             <!-- Project Details -->
