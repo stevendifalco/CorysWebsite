@@ -18,6 +18,30 @@
             <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
             {% if post.description %}
             <p>{{ post.description }}</p>
+            {% if post.images %}
+            <div id="carousel-{{ post.modal-id }}" class="carousel slide" data-ride="carousel">
+              <!-- Indicators (optional) -->
+              <ol class="carousel-indicators">
+                {% for image in post.images %}
+                <li data-target="#carousel-{{ post.modal-id }}" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}"></li>
+                {% endfor %}
+              </ol>
+              <!-- Slides -->
+              <div class="carousel-inner">
+                {% for image in post.images %}
+                <div class="item {% if forloop.first %}active{% endif %}">
+                  <img src="/img/portfolio/{{ image }}" class="img-responsive img-centered">
+                </div>
+                {% endfor %}
+              </div>
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-{{ post.modal-id }}" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div>
             {% endif %}
             <ul class="list-inline item-details">
               {% if post.client %}
@@ -25,7 +49,6 @@
                 <strong>{{ post.client }}</strong>
               </li>
               {% endif %}
-              {{ post.content }}
               {% if post.project-date %}
               <li>Date:
                 <strong>{{ post.project-date }}</strong>
