@@ -24,12 +24,14 @@
               <!-- GRID VIEW -->
               <div class="row portfolio-grid">
                 {% for image in post.images %}
-              <div class="col-sm-4">
-                <a href="{{ '/img/portfolio/' | relative_url }}{{ image.file }}" title="{{ image.caption}}">
-                  <img src="{{ '/img/portfolio/' | relative_url }}{{ image.file }}" class="img-responsive img-centered">
-                </a>
-                <p> class="text-center">{{ image.caption }}</p>
-              </div>
+                  <div class="col-sm-4">
+                    <a href="{{ '/img/portfolio/' | relative_url }}{{ image.file }}">
+                      <img src="{{ '/img/portfolio/' | relative_url }}{{ image.file }}" class="img-responsive img-centered">
+                    </a>
+                    {% if image.caption %}
+                      <p class="text-center">{{ image.caption }}</p>
+                    {% endif %}
+                  </div>
                 {% endfor %}
               </div>
             
