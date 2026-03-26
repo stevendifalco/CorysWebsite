@@ -4,29 +4,6 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="{{ "/js/bootstrap.min.js" }}"></script>
 
-<!-- Add in Magnific Popup to grid -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
-<script>
-$(document).ready(function() {
-
-  // Bind Magnific Popup dynamically to all current and future portfolio-grid containers
-  $(document).on('click', '.portfolio-grid a', function(e) {
-    e.preventDefault(); // prevent default link behavior
-
-    // Find the parent grid for this image
-    $(this).parent().parent().magnificPopup({
-      delegate: 'a',
-      type: 'image',
-      gallery: {
-        enabled: true
-      }
-    }).magnificPopup('open');
-  });
-
-});
-</script>
-
 <!-- Plugin JavaScript -->
 <script src="{{ "/js/jquery.easing.min.js" }}"></script>
 <script src="{{ "/js/classie.js" }}"></script>
