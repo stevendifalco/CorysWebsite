@@ -4,7 +4,7 @@ modal-id: 3
 date: 2026-03-25
 img: cake.png
 display: grid
-images
+images:
 - jackson.png
 - juni.png
 - poodle.png
