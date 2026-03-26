@@ -5,12 +5,12 @@ date: 2026-03-25
 img: cake.png
 display: grid
 images:
-- jackson.png
+- file: jackson.png
   caption: 5x7 graphite
-- juni.png
+- file: juni.png
   caption: 5x7 graphite
-- poodle.png
-- luca.png
+- file: poodle.png
+- file: luca.png
   caption: 24x36 ball-point pen
 #alt: image-alt
 #project-date: April 2014
