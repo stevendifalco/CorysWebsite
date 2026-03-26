@@ -9,15 +9,11 @@
 
 <script>
 $(document).ready(function() {
-  $(document).on('click', '.portfolio-grid', function() {
-    if (!$(this).data('mfp')) {
-      $(this).magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        gallery: {
-          enabled: true
-        }
-      });
+  $('.portfolio-grid').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    gallery: {
+      enabled: true
     }
   });
 });
