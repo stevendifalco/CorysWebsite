@@ -27,14 +27,14 @@ disqus_shortname: myshortname
 color:
   primary: 636363 #80B3FF
   primary-rgb: "99,99,99" #"128,179,255"
-  secondary: 2c3e50 #FD6E8A
-  secondary-dark: 233140 #A2122F
+  secondary: C7C7C7 #FD6E8A
+  secondary-dark: C7C7C7 #A2122F
 
 # Footer settings
 footer:
   copyright: Cory Spraker
   location: Location
-  social: Around the Web
+  social: Socials
   credits: Credits
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
