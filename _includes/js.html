@@ -9,13 +9,21 @@
 
 <script>
 $(document).ready(function() {
-  $('.portfolio-grid').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    gallery: {
-      enabled: true
-    }
+
+  // Bind Magnific Popup dynamically to all current and future portfolio-grid containers
+  $(document).on('click', '.portfolio-grid a', function(e) {
+    e.preventDefault(); // prevent default link behavior
+
+    // Find the parent grid for this image
+    $(this).parent().parent().magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      gallery: {
+        enabled: true
+      }
+    }).magnificPopup('open');
   });
+
 });
 </script>
 
