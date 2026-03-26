@@ -9,12 +9,14 @@
 
 <script>
 $(document).ready(function() {
-  $('.portfolio-grid').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    gallery: {
-      enabled: true
-    }
+  $('.portfolio-grid').each(function() {
+    $(this).magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      gallery: {
+        enabled: true
+      }
+    });
   });
 });
 </script>
