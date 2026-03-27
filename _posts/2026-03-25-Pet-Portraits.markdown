@@ -7,13 +7,13 @@ display: grid
 img: jackson.png
 images:
 - file: jackson.png
-  caption: 5x7 graphite
+  caption:5x7 graphite 2026
 - file: juni.png
-  caption: 2026 5x7 Graphite on Paper
+  caption:5x7 graphite 2026
 - file: poodle.png
-  caption: 2025 5x7
+  caption:5x7 graphite 2026
 - file: luca.png
-  caption: 24x36 ball-point pen
+  caption:16x20 ball-point pen 2023
 #alt: image-alt
 #project-date: April 2014
 #client: Start Bootstrap
