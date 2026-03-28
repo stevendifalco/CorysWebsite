@@ -279,6 +279,23 @@ section.success {
     }
   } */
 
+.portfolio-grid-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-grid-flex .col-sm-4 {
+  width: 33.333%;
+  padding: 10px;
+}
+
+.portfolio-grid-flex img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 .btn-outline {
     margin-top: 15px;
     border: solid 2px #fff;
