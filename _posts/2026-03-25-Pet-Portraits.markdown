@@ -14,9 +14,6 @@ images:
   caption: 5x7 graphite 2026
 - file: luca.png
   caption: 16x20 ball-point pen 2023
-#alt: image-alt
-#project-date: April 2014
-#client: Start Bootstrap
-#category: Web Development
+category: Pet Portraits
 description: Pet portraits completed over the years. Pen and graphite.
 ---
