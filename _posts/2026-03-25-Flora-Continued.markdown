@@ -1,6 +1,7 @@
 ---
 layout: default
 modal-id: 1
+category: Flora; Continued
 date: 2026-03-25
 img: detail1.png
 display: grid
