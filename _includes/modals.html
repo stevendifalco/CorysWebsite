@@ -22,7 +22,7 @@
               {% if post.display == "grid" %}
             
               <!-- GRID VIEW -->
-              <div class="row portfolio-flex">
+              <div class="row portfolio-grid">
                 {% for image in post.images %}
                   <div class="col-sm-4">
                     <a href="{{ '/img/portfolio/' | relative_url }}{{ image.file }}" target="_blank">
