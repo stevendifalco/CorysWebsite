@@ -25,14 +25,18 @@
               <div class="row portfolio-grid">
                 {% for image in post.images %}
                   <div class="col-sm-4">
-                    <a href="{{ '/img/portfolio/' | relative_url }}{{ image.file }}" target="_blank">
-                      <img src="{{ '/img/portfolio/' | relative_url }}{{ image.file }}" class="img-responsive img-centered">
+                    <a href="{{ '/img/portfolio/' | relative_url }}{{ image.file }}">
+                      
+                      <div class="portfolio-thumb">
+                        <img src="{{ '/img/portfolio/' | relative_url }}{{ image.file }}" class="portfolio-img">
+                      </div>
                     </a>
+                  
                     {% if image.caption %}
                       <p class="text-center">{{ image.caption }}</p>
-                  </div>
                     {% endif %}
-                    </div>
+                  </div>
+                </div>
                 {% endfor %}
               </div>
               {% else %}
