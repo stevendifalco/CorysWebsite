@@ -286,15 +286,13 @@ section.success {
   flex-wrap: wrap;
 }
 
-.portfolio-grid > div {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
+.portfolio-grid .col-sm-4 {
+  padding: 10px;
 }
 
 .portfolio-img {
   width: 100%;
-  height: 250px;        /* KEY FIX */
+  height: auto;        /* KEY FIX */
   object-fit: cover;    /* keeps proportions */
 }
 
