@@ -261,9 +261,12 @@ section.success {
   justify-content: flex-start;
 }
 
-/* 3 columns desktop */
+    /* 3 columns desktop */
+    /* .portfolio-flex-item {width: calc(33.333% - 14px);} */
+
+/* 2 columns desktop */
 .portfolio-flex-item {
-  width: calc(33.333% - 14px);
+  width: calc(50% - 10px);
 }
 
 /* 2 columns tablet */
@@ -284,7 +287,7 @@ section.success {
 
 .portfolio-thumb {
   width: 100%;
-  height: 260px;              /* 🔑 controls tile height */
+  height: 400px;              /* 🔑 controls tile height */
   overflow: hidden;
   display: flex;
   align-items: center;
