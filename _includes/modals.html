@@ -22,22 +22,21 @@
               {% if post.display == "grid" %}
             
               <!-- GRID VIEW -->
-              <div class="row portfolio-grid">
+              <div class="portfolio-masonry">
                 {% for image in post.images %}
-                  <div class="col-sm-4">
-                    <a href="{{ '/img/portfolio/' | relative_url }}{{ image.file }}">
-                      
-                      <div class="portfolio-thumb">
-                        <img src="{{ '/img/portfolio/' | relative_url }}{{ image.file }}" class="portfolio-img">
-                      </div>
-                    </a>
-                  
-                    {% if image.caption %}
-                      <p class="text-center">{{ image.caption }}</p>
-                    {% endif %}
-                  </div>
+                
+                <div class="portfolio-item">
+                  <a href="{{ '/img/portfolio/' | relative_url }}{{ image.file }}">
+                    <img src="{{ '/img/portfolio/' | relative_url }}{{ image.file }}" class="portfolio-img">
+                  </a>
+              
+                  {% if image.caption %}
+                    <p class="text-center">{{ image.caption }}</p>
+                  {% endif %}
                 </div>
+              
                 {% endfor %}
+              </div>
               </div>
               {% else %}
             
