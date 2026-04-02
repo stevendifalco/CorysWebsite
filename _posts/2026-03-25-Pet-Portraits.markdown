@@ -14,6 +14,8 @@ images:
   caption: 5x7 graphite 2026
 - file: luca.png
   caption: 16x20 ball-point pen 2023
+- file: lab.jpeg
+  caption: 8x10 graphite 2026
 category: Pet Portraits
 description: Pet portraits completed over the years. Pen and graphite.
 ---
