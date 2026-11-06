@@ -85,3 +85,52 @@
   </div>
 </div>
 {% endfor %}
+
+<script>
+document.addEventListener('click', function (event) {
+  const link = event.target.closest(
+    '.portfolio-modal .portfolio-masonry a'
+  );
+
+  if (!link) return;
+
+  // Open the image here instead of following the link.
+  event.preventDefault();
+
+  const viewer = document.createElement('dialog');
+  viewer.className = 'portfolio-lightbox';
+  viewer.setAttribute('aria-label', 'Enlarged portfolio image');
+
+  viewer.innerHTML = `
+    <button type="button" autofocus>Close image ✕</button>
+    <img alt="">
+  `;
+
+  const image = viewer.querySelector('img');
+  image.src = link.href;
+  image.alt = link.querySelector('img')?.alt || 'Portfolio image';
+
+  viewer.querySelector('button').addEventListener('click', function () {
+    viewer.close();
+  });
+
+  // Clicking the shaded area also closes the image.
+  viewer.addEventListener('click', function (event) {
+    if (event.target === viewer) viewer.close();
+  });
+
+  // Escape closes the image without closing the portfolio post.
+  viewer.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') event.stopPropagation();
+  });
+
+  viewer.addEventListener('close', function () {
+    viewer.remove();
+    link.focus({ preventScroll: true });
+  });
+
+  // Keep the viewer inside the currently open portfolio post.
+  link.closest('.portfolio-modal').appendChild(viewer);
+  viewer.showModal();
+});
+</script>
