@@ -309,8 +309,14 @@ section.success {
 
 /* ===== Modal portfolio in masonry style ===== */
 
+/* Width of the gallery when a grid post is opened */
+.portfolio-modal .portfolio-grid-container {
+  width: 95%;
+  max-width: 1600px;
+}
+
 .portfolio-masonry {
-  column-count: 3;
+  column-count: 2;
   column-gap: 20px;
 }
 
