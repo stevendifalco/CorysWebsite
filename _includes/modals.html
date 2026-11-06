@@ -5,9 +5,10 @@
     <div class="close-modal" data-dismiss="modal">
       <div class="lr"><div class="rl"></div></div>
     </div>
-    <div class="container">
+    <!-- Wider container for grid posts -->
+    <div class="{% if post.display == 'grid' %}container-fluid portfolio-grid-container{% else %}container{% endif %}">
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
+        <div class="{% if post.display == 'grid' %}col-xs-12{% else %}col-lg-8 col-lg-offset-2{% endif %}">
           <div class="modal-body">
 
             <!-- Title & Description -->
