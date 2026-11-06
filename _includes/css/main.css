@@ -547,3 +547,32 @@ footer .footer-below {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
 }
+
+/* Enlarged image viewer */
+.portfolio-lightbox {
+  max-width: 96vw;
+  max-height: 96vh;
+  padding: 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.portfolio-lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.portfolio-modal .portfolio-lightbox img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 80vh;
+  margin: 12px auto 0;
+}
+
+.portfolio-lightbox button {
+  display: block;
+  margin-left: auto;
+  cursor: pointer;
+}
