@@ -22,5 +22,7 @@ images:
 - file: herideaoftime.png
 - file: imstillhere.png
   #caption: 16x20 ball-point pen 2023
+- file: monstera1.png
+- file: monstera2.png
 description: Flora & Figure is an ongoing exploration of human form and nature. In this series, plants mimic the human figure's contours and gestures, playing with juxtaposition and connection.
 ---
