@@ -1,13 +1,23 @@
 ---
 layout: default
-modal-id: 2
+modal-id: 3
 date: 2026-03-25
 display: grid
-img: family.jpeg
+img: jackson.png
 images:
-- file: family.jpeg
+- file: jackson.png
+  caption: 5x7 graphite 2026
+- file: juni.png
+  caption: 5x7 graphite 2026
+- file: poodle.png
+  caption: 5x7 graphite 2026
+- file: luca.png
+  caption: 16x20 ball-point pen 2023
+- file: libby.jpeg
+  caption: 5x7 graphite 2026
+- file: sunny.jpeg
+  caption: 8x10 graphie 2026
+- file: lab.jpeg
   caption: 8x10 graphite 2026
-
-category: Portraits
-description: Portraits completed over the years. Pen and graphite.
----
+category: Pet Portraits
+description: Pet portraits completed over the years. Pen and graphite.
