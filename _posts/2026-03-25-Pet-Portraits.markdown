@@ -21,3 +21,4 @@ images:
   caption: 8x10 graphite 2026
 category: Pet Portraits
 description: Pet portraits completed over the years. Pen and graphite.
+---
